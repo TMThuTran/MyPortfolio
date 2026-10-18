@@ -10,7 +10,7 @@ tile: green
 visual: recon
 ---
 
-This is my current portfolio project. I'm writing it up while it's in the requirements phase, because the framing decisions are the part of product work that's usually invisible, and they matter most.
+This is my current side project. I'm writing it up while it's in the requirements phase, because the framing decisions are the part of product work that's usually invisible, and they matter most.
 <!-- Update this page as the project moves forward: add what you build, what you test, and what changed your mind. -->
 
 ## The problem
