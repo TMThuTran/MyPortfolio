@@ -4,13 +4,14 @@
 # ---------------------------------------------------------------
 
 title: Thu Tran
-tagline: Product | Digital
+tagline: Product manager for AI that does real work
 description: >-
-  Thu Tran is a driven product professional in the Netherlands with eight years of
-  finance and banking automation, passionate about building impactful & responsible (AI) solutions.
+  Thu Tran is a product manager in the Netherlands with eight years of
+  finance and banking automation behind her, now focused on AI agents
+  and how to know when they are getting it right.
 
-# Your public address. Replace YOUR-GITHUB-USERNAME with your GitHub username.
-url: "https://TMThuTran.github.io"
+# Your public address.
+url: "https://tmthutran.github.io"
 baseurl: ""
 
 author:

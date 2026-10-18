@@ -1,0 +1,37 @@
+<figure class="recon" aria-label="Illustration: an invoice exception being reconciled. Invoice and purchase order show 12 office chairs for €12,480; the goods receipt shows 10 received. An agent flags the quantity difference, recommends booking €10,400 now and holding €2,080, cites the receipt line as evidence, and a person approves.">
+  <div class="recon-docs" aria-hidden="true">
+    <div class="doc d1">
+      <p class="doc-type">Invoice</p>
+      <p class="doc-ref">INV-2041</p>
+      <p class="doc-line">Office chairs <span>× 12</span></p>
+      <p class="doc-amt">€12,480</p>
+    </div>
+    <div class="doc d2">
+      <p class="doc-type">Purchase order</p>
+      <p class="doc-ref">PO-7713</p>
+      <p class="doc-line">Office chairs <span>× 12</span></p>
+      <p class="doc-amt">€12,480</p>
+    </div>
+    <div class="doc d3 is-off">
+      <p class="doc-type">Goods receipt</p>
+      <p class="doc-ref">GR-5520</p>
+      <p class="doc-line">Office chairs <span class="flag">× 10</span></p>
+      <p class="doc-amt">10 of 12 received</p>
+    </div>
+  </div>
+
+  <ul class="recon-checks" aria-hidden="true">
+    <li class="c1"><span class="mark ok">✓</span>Supplier matches</li>
+    <li class="c2"><span class="mark ok">✓</span>Unit price matches</li>
+    <li class="c3"><span class="mark warn">!</span>Quantity differs: 12 billed, 10 received</li>
+  </ul>
+
+  <div class="recon-agent" aria-hidden="true">
+    <p class="agent-label">Agent recommendation</p>
+    <p class="agent-text">Partial delivery. Book <strong>€10,400</strong> now and hold <strong>€2,080</strong> until the last 2 chairs arrive.</p>
+    <p class="agent-evidence">Evidence: GR-5520, line 1</p>
+    <p class="stamp">Approved by a reviewer</p>
+  </div>
+
+  <figcaption>How I think agents should handle finance work: find the exception, show the evidence, and let a person decide.</figcaption>
+</figure>
