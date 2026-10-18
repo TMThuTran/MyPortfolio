@@ -1,0 +1,25 @@
+---
+layout: default
+title: Work
+permalink: /work/
+---
+<section class="wrap">
+  <header class="row page-head">
+    <div class="margin"></div>
+    <div class="main">
+      <h1>Work</h1>
+      <p class="lede">Case studies from automation and AI projects in finance and banking: what the problem was, what I did, and what I'd carry into the next product.</p>
+    </div>
+  </header>
+  {% assign cases = site.work | sort: "order" %}
+  {% for case in cases %}
+  <div class="row case-row">
+    <p class="margin">{{ case.period }}</p>
+    <div class="main">
+      <h2 class="entry-title"><a href="{{ case.url | relative_url }}">{{ case.title }}</a></h2>
+      <p>{{ case.description }}</p>
+      <p class="meta">{{ case.org }}{% if case.status %}, {{ case.status | downcase }}{% endif %}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>

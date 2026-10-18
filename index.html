@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<section class="wrap hero">
+  <div class="row">
+    <div class="margin"></div>
+    <div class="main">
+      <h1 class="display">I turn manual finance and banking work into software people actually use.</h1>
+      <p class="lede">For eight years that meant bots, OCR and system integrations at Accenture, Adyen, Yokoy and Rabobank. Now I work on the next version of the same problem: AI agents that take on real work, and the evaluation it takes to know when they're getting it right.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="results-heading">
+  <div class="row">
+    <h2 class="margin" id="results-heading">Results</h2>
+    <div class="main">
+      <ul class="ledger">
+        <li><span class="item">Supplier invoice booking time at Adyen, after the OCR rollout I led</span><span class="leader" aria-hidden="true"></span><span class="figure">−30%</span></li>
+        <li><span class="item">Full-time roles' worth of work automated by 11 RPA bots for a Dutch bank</span><span class="leader" aria-hidden="true"></span><span class="figure">11 FTE</span></li>
+        <li><span class="item">Accuracy gain on the customer requests those bots processed</span><span class="leader" aria-hidden="true"></span><span class="figure">+20%</span></li>
+        <li><span class="item">Annual recurring revenue across 7 implementations I ran at Yokoy</span><span class="leader" aria-hidden="true"></span><span class="figure">€135k</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="work-heading">
+  <div class="row">
+    <h2 class="margin" id="work-heading">Selected work</h2>
+    <div class="main">
+      <ul class="entries">
+        {% assign cases = site.work | sort: "order" %}
+        {% for case in cases %}
+        <li>
+          <a href="{{ case.url | relative_url }}">{{ case.title }}</a>
+          <p>{{ case.description }}</p>
+          <p class="meta">{{ case.period }}{% if case.status %}, {{ case.status | downcase }}{% endif %}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" aria-labelledby="writing-heading">
+  <div class="row">
+    <h2 class="margin" id="writing-heading">Writing</h2>
+    <div class="main">
+      <ul class="entries">
+        {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+          <p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="more"><a href="{{ '/writing/' | relative_url }}">All writing</a></p>
+    </div>
+  </div>
+</section>

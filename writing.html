@@ -1,0 +1,23 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<section class="wrap">
+  <header class="row page-head">
+    <div class="margin"></div>
+    <div class="main">
+      <h1>Writing</h1>
+      <p class="lede">Notes on AI product management, written while I learn it and apply it to the problems I know from finance and banking.</p>
+    </div>
+  </header>
+  {% for post in site.posts %}
+  <div class="row case-row">
+    <p class="margin"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
+    <div class="main">
+      <h2 class="entry-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

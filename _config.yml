@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------
+# Site settings. Change these to make the site yours.
+# After changing this file, GitHub rebuilds the site in ~1 minute.
+# ---------------------------------------------------------------
+
+title: Thu Tran
+tagline: Product manager for AI that does real work
+description: >-
+  Thu Tran is a product manager in the Netherlands with eight years of
+  finance and banking automation behind her, now focused on AI agents
+  and how to know when they are getting it right.
+
+# Your public address. Replace YOUR-GITHUB-USERNAME with your GitHub username.
+url: "https://YOUR-GITHUB-USERNAME.github.io"
+baseurl: ""
+
+author:
+  name: Thu Tran
+  email: minh.thu.tran95@gmail.com
+  linkedin: https://www.linkedin.com/in/mttran95/
+  location: Amersfoort, the Netherlands
+
+lang: en
+
+# How posts and case studies get their addresses
+permalink: /writing/:year/:title/
+
+collections:
+  work:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: work
+    values:
+      layout: case
+
+# Built-in GitHub Pages features
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: writing/feed.xml
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - HOW-TO-PUBLISH.md
+  - README.md
+  - templates/
