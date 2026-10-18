@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="wrap">
+<div class="wrap">
   <header class="row page-head">
     <div class="margin"></div>
     <div class="main">
@@ -9,10 +9,18 @@ layout: default
       {% if page.intro %}<p class="lede">{{ page.intro }}</p>{% endif %}
     </div>
   </header>
+  {% if page.visual == 'recon' %}
+  <div class="row">
+    <div class="margin"></div>
+    <div class="main">{% include hero-visual.html %}</div>
+  </div>
+  {% endif %}
+</div>
+<div class="wrap article">
   <div class="row">
     <div class="margin"></div>
     <div class="main prose">
       {{ content }}
     </div>
   </div>
-</article>
+</div>

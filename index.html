@@ -1,70 +1,76 @@
 ---
 layout: default
 ---
-<section class="wrap hero">
-  <div class="row">
-    <div class="margin"></div>
-    <div class="main">
-      <h1 class="name">{{ site.author.name }}</h1>
-      <p class="role">AI product manager for finance and banking</p>
-      <p class="statement">I turn manual finance and banking work into software people actually use.</p>
-      <p class="lede">For eight years that meant bots, OCR and system integrations at Accenture, Adyen, Yokoy and Rabobank. Now I work on the next version of the same problem: AI agents that take on real work, and the evaluation it takes to know when they're getting it right.</p>
-    </div>
+<section class="wrap intro">
+  <div class="portrait">
+    {% if site.author.photo %}
+    <img src="{{ site.author.photo | relative_url }}" alt="Portrait of {{ site.author.name }}" width="440" height="550">
+    {% else %}
+    <div class="photo-fallback" aria-hidden="true">TT</div>
+    {% endif %}
+    <p class="status">Open to AI product roles</p>
   </div>
-  <div class="row">
-    <div class="margin"></div>
-    <div class="main">
-      {% include hero-visual.html %}
+
+  <div class="intro-text">
+    <h1 class="hello">Hi, I'm {{ site.author.name }}.</h1>
+    <p class="pitch">I turn manual finance and banking work into software people actually use, and I'm bringing that to AI agents.</p>
+    <p class="lede">Eight years across Accenture, Adyen, Yokoy and Rabobank taught me that automation succeeds or fails on the exceptions. That's the part of AI products I care most about.</p>
+
+    <dl class="now">
+      {% for item in site.now %}
+      <div>
+        <dt>{{ item.label }}</dt>
+        <dd>{{ item.text }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+
+    <div class="actions">
+      <a class="btn btn-dark" href="{{ '/work/' | relative_url }}">See my work</a>
+      <a class="btn" href="#contact">Say hello</a>
     </div>
   </div>
 </section>
 
-<section class="wrap" aria-labelledby="results-heading">
-  <div class="row">
-    <h2 class="margin" id="results-heading">Results</h2>
-    <div class="main">
-      <ul class="ledger">
-        <li><span class="item">Supplier invoice booking time at Adyen, after the OCR rollout I led</span><span class="leader" aria-hidden="true"></span><span class="figure">−30%</span></li>
-        <li><span class="item">Full-time roles' worth of work automated by 11 RPA bots for a Dutch bank</span><span class="leader" aria-hidden="true"></span><span class="figure">11 FTE</span></li>
-        <li><span class="item">Accuracy gain on the customer requests those bots processed</span><span class="leader" aria-hidden="true"></span><span class="figure">+20%</span></li>
-        <li><span class="item">Annual recurring revenue across 7 implementations I ran at Yokoy</span><span class="leader" aria-hidden="true"></span><span class="figure">€135k</span></li>
-      </ul>
-    </div>
+<section class="band" aria-labelledby="numbers-heading">
+  <div class="wrap">
+    <h2 class="section-title" id="numbers-heading">The numbers behind the work</h2>
+    <p class="section-intro">Results from projects I led or delivered.</p>
+    <ul class="ledger">
+      <li><span class="item">Supplier invoice booking time at Adyen, after the OCR rollout I led</span><span class="leader" aria-hidden="true"></span><span class="figure">−30%</span></li>
+      <li><span class="item">Work automated by 11 RPA bots for a Dutch bank</span><span class="leader" aria-hidden="true"></span><span class="figure">11 FTE</span></li>
+      <li><span class="item">Accuracy gain on the customer requests those bots processed</span><span class="leader" aria-hidden="true"></span><span class="figure">+20%</span></li>
+      <li><span class="item">Annual recurring revenue across 7 implementations I ran at Yokoy</span><span class="leader" aria-hidden="true"></span><span class="figure">€135k</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="wrap" aria-labelledby="work-heading">
-  <div class="row">
-    <h2 class="margin" id="work-heading">Selected work</h2>
-    <div class="main">
-      <ul class="entries">
-        {% assign cases = site.work | sort: "order" %}
-        {% for case in cases %}
-        <li>
-          <a href="{{ case.url | relative_url }}">{{ case.title }}</a>
-          <p>{{ case.description }}</p>
-          <p class="meta">{{ case.period }}{% if case.status %}, {{ case.status | downcase }}{% endif %}</p>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+  <h2 class="section-title" id="work-heading">Selected work</h2>
+  <div class="tiles">
+    {% assign cases = site.work | sort: "order" %}
+    {% for case in cases %}
+    <a class="tile tile-{{ case.tile | default: 'ink' }}" href="{{ case.url | relative_url }}">
+      {% if case.status %}<span class="tile-badge">{{ case.status }}</span>{% else %}<span class="tile-figure">{{ case.tile_figure }}</span>{% endif %}
+      <span>
+        <span class="tile-title">{{ case.title }}</span>
+        <span class="tile-meta">{{ case.org }}, {{ case.period }}</span>
+      </span>
+    </a>
+    {% endfor %}
   </div>
+  <p class="more"><a href="{{ '/work/' | relative_url }}">All case studies</a></p>
 </section>
 
 <section class="wrap" aria-labelledby="writing-heading">
-  <div class="row">
-    <h2 class="margin" id="writing-heading">Writing</h2>
-    <div class="main">
-      <ul class="entries">
-        {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% if post.description %}<p>{{ post.description }}</p>{% endif %}
-          <p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
-        </li>
-        {% endfor %}
-      </ul>
-      <p class="more"><a href="{{ '/writing/' | relative_url }}">All writing</a></p>
-    </div>
-  </div>
+  <h2 class="section-title" id="writing-heading">From my notebook</h2>
+  {% for post in site.posts limit:2 %}
+  <a class="feature" href="{{ post.url | relative_url }}">
+    <p class="meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" }}</time></p>
+    <h3>{{ post.title }}</h3>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    <p class="read">Read the post</p>
+  </a>
+  {% endfor %}
+  <p class="more"><a href="{{ '/writing/' | relative_url }}">All writing</a></p>
 </section>

@@ -6,6 +6,8 @@ period: 2026
 org: Portfolio project
 role: Product owner, from problem framing to evaluation design
 status: In progress
+tile: green
+visual: recon
 ---
 
 This is my current portfolio project. I'm writing it up while it's in the requirements phase, because the framing decisions are the part of product work that's usually invisible, and they matter most.

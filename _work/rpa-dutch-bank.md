@@ -6,6 +6,8 @@ period: 2018 – 2021
 org: Accenture, for a major Dutch bank
 role: Senior automation analyst, design to deployment
 outcome: 11 FTE of work automated, 20% higher accuracy
+tile: ink
+tile_figure: 11 bots
 ---
 
 ## The situation

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="wrap">
+<div class="wrap">
   <header class="row page-head">
     <p class="margin"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %b %Y" }}</time></p>
     <div class="main">
@@ -9,6 +9,14 @@ layout: default
       {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
     </div>
   </header>
+  {% if page.visual == 'recon' %}
+  <div class="row">
+    <div class="margin"></div>
+    <div class="main">{% include hero-visual.html %}</div>
+  </div>
+  {% endif %}
+</div>
+<div class="wrap article">
   <div class="row">
     <div class="margin"></div>
     <div class="main prose">
@@ -16,4 +24,4 @@ layout: default
       <p class="back"><a href="{{ '/writing/' | relative_url }}">All writing</a></p>
     </div>
   </div>
-</article>
+</div>

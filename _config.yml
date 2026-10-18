@@ -19,6 +19,18 @@ author:
   email: minh.thu.tran95@gmail.com
   linkedin: https://www.linkedin.com/in/mttran95/
   location: Amersfoort, the Netherlands
+  # Your photo: upload a portrait (about 4:5, e.g. 880x1100 px) as assets/photo.jpg,
+  # then remove the # at the start of the next line.
+  # photo: /assets/photo.jpg
+
+# The "working / building / reading" block on the home page. Update it any time.
+now:
+  - label: Working
+    text: Business Analyst, Rabo Business Banking at Rabobank
+  - label: Building
+    text: An agent for invoice reconciliation exceptions
+  - label: Reading
+    text: AI Engineering by Chip Huyen, and Inspired by Marty Cagan
 
 lang: en
 

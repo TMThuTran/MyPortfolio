@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="wrap">
+<div class="wrap">
   <header class="row page-head">
     <p class="margin">{{ page.period }}</p>
     <div class="main">
@@ -15,6 +15,14 @@ layout: default
       </dl>
     </div>
   </header>
+  {% if page.visual == 'recon' %}
+  <div class="row">
+    <div class="margin"></div>
+    <div class="main">{% include hero-visual.html %}</div>
+  </div>
+  {% endif %}
+</div>
+<div class="wrap article">
   <div class="row">
     <div class="margin"></div>
     <div class="main prose">
@@ -22,4 +30,4 @@ layout: default
       <p class="back"><a href="{{ '/work/' | relative_url }}">All work</a></p>
     </div>
   </div>
-</article>
+</div>

@@ -6,6 +6,8 @@ period: 2021 – 2022
 org: Adyen, Group Finance
 role: Senior business analyst, implementation lead
 outcome: Supplier invoice booking time down 30%
+tile: amber
+tile_figure: −30%
 ---
 
 ## The situation
