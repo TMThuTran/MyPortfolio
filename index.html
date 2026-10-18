@@ -26,7 +26,7 @@ layout: default
     </dl>
 
     <div class="actions">
-      <a class="btn btn-dark" href="{{ '/work/' | relative_url }}">See my work</a>
+      <a class="btn btn-dark" href="{{ '/projects/' | relative_url }}">See my projects</a>
       <a class="btn" href="#contact">Say hello</a>
     </div>
   </div>
@@ -45,21 +45,15 @@ layout: default
   </div>
 </section>
 
-<section class="wrap" aria-labelledby="work-heading">
-  <h2 class="section-title" id="work-heading">Selected work</h2>
+<section class="wrap" aria-labelledby="projects-heading">
+  <h2 class="section-title" id="projects-heading">Side projects</h2>
+  <p class="section-intro">What I build in my own time to practise AI product work end to end.</p>
   <div class="tiles">
-    {% assign cases = site.work | sort: "order" %}
-    {% for case in cases %}
-    <a class="tile tile-{{ case.tile | default: 'ink' }}" href="{{ case.url | relative_url }}">
-      {% if case.status %}<span class="tile-badge">{{ case.status }}</span>{% else %}<span class="tile-figure">{{ case.tile_figure }}</span>{% endif %}
-      <span>
-        <span class="tile-title">{{ case.title }}</span>
-        <span class="tile-meta">{{ case.org }}, {{ case.period }}</span>
-      </span>
-    </a>
-    {% endfor %}
+    {% assign items = site.projects | sort: "order" %}
+    {% for item in items %}{% include project-tile.html item=item %}{% endfor %}
+    {% if items.size < 2 %}{% include next-tile.html %}{% endif %}
   </div>
-  <p class="more"><a href="{{ '/work/' | relative_url }}">All case studies</a></p>
+  <p class="more"><a href="{{ '/projects/' | relative_url }}">All projects</a></p>
 </section>
 
 <section class="wrap" aria-labelledby="writing-heading">

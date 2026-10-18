@@ -1,0 +1,16 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+<section class="wrap">
+  <header class="page-head">
+    <h1>Projects</h1>
+    <p class="lede">Things I build in my own time to practise AI product work end to end: framing the problem, building something real, and checking whether it works.</p>
+  </header>
+  <div class="tiles">
+    {% assign items = site.projects | sort: "order" %}
+    {% for item in items %}{% include project-tile.html item=item %}{% endfor %}
+    {% if items.size < 2 %}{% include next-tile.html %}{% endif %}
+  </div>
+</section>

@@ -34,10 +34,13 @@ now:
 
 lang: en
 
-# How posts and case studies get their addresses
+# How posts, projects and case studies get their addresses
 permalink: /writing/:year/:title/
 
 collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
   work:
     output: true
     permalink: /work/:name/
@@ -48,6 +51,11 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: case
   - scope:
       path: ""
       type: work

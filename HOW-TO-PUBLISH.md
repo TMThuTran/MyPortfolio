@@ -16,7 +16,7 @@ Go to github.com and sign up. Pick your username carefully: it becomes part of y
 
 1. Unzip `thutran-site.zip` on your computer.
 2. In your new repository, click **uploading an existing file** (or **Add file > Upload files**).
-3. Open the unzipped `thutran-site` folder, select **everything inside it** (not the folder itself) and drag it onto the upload area. Folders like `_posts` and `_work` keep their structure.
+3. Open the unzipped `thutran-site` folder, select **everything inside it** (not the folder itself) and drag it onto the upload area. Folders like `_posts` and `_projects` keep their structure.
 4. Click **Commit changes**.
 
 ## 4. Turn on GitHub Pages
@@ -36,7 +36,8 @@ Open `_config.yml` in the repository, click the pencil icon, and replace `YOUR-G
 You can do all of this in the browser on github.com.
 
 - **Write a new post:** copy `templates/new-post.md`, create a new file in the `_posts` folder named like `2026-11-02-my-post-title.md`, paste, and write. The date in the file name is the publish date.
-- **Add a case study:** do the same with `templates/new-case-study.md`, in the `_work` folder.
+- **Add a side project:** do the same with `templates/new-project.md`, in the `_projects` folder.
+- **Career case studies** (Adyen, Accenture) live in the `_work` folder and are linked from the About page.
 - **Change your bio or experience:** edit `about.md`.
 - **Change the home page headline or results:** edit `index.html`. The text sits between the tags, so change only the words.
 - **Change your name, email or LinkedIn:** edit `_config.yml`.

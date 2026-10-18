@@ -3,7 +3,7 @@ title: An agent for the invoice exceptions nobody wants to handle
 description: A product case for using an AI agent on the hardest part of invoice reconciliation, the exceptions, with evaluation designed in from day one.
 order: 1
 period: 2026
-org: Portfolio project
+org: Side project
 role: Product owner, from problem framing to evaluation design
 status: In progress
 tile: green

@@ -31,8 +31,8 @@ With AI, trust is even more fragile, because the system won't behave the same wa
 
 When an RPA bot hits a screen it doesn't recognise, it stops and throws an error. Annoying, but visible. A language-model agent that meets something unfamiliar will often produce a plausible answer anyway. That's the most important difference between the automation I grew up with and the automation I'm moving into.
 
-It's why I think evaluation is the centre of AI product management: deciding what good looks like, building test sets from real cases, and monitoring for quiet failures after launch. It's also why I've chosen invoice exceptions for my [portfolio project]({{ '/work/agentic-invoice-reconciliation/' | relative_url }}). I know what the failures look like there, and I know what they cost.
+It's why I think evaluation is the centre of AI product management: deciding what good looks like, building test sets from real cases, and monitoring for quiet failures after launch. It's also why I've chosen invoice exceptions for my [portfolio project]({{ '/projects/agentic-invoice-reconciliation/' | relative_url }}). I know what the failures look like there, and I know what they cost.
 
 ---
 
-I'm writing here as I work through AI product management in practice. If you're building agents for finance or operations, I'd like to compare notes: [get in touch]({{ '/about/' | relative_url }}#get-in-touch).
+I'm writing here as I work through AI product management in practice. If you're building agents for finance or operations, I'd like to compare notes: [get in touch](#contact).

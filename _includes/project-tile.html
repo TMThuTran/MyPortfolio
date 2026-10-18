@@ -1,0 +1,7 @@
+<a class="tile tile-{{ include.item.tile | default: 'ink' }}" href="{{ include.item.url | relative_url }}">
+  {% if include.item.status %}<span class="tile-badge">{{ include.item.status }}</span>{% else %}<span class="tile-figure">{{ include.item.tile_figure }}</span>{% endif %}
+  <span>
+    <span class="tile-title">{{ include.item.title }}</span>
+    <span class="tile-meta">{{ include.item.description }}</span>
+  </span>
+</a>

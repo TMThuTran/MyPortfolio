@@ -356,6 +356,13 @@ main > section.band + section { padding-top: 5rem; }
 .tile:hover { color: inherit; }
 .tile-green:hover, .tile-ink:hover { color: #FFFFFF; }
 .tile-amber:hover { color: #1B2333; }
+.tile-next {
+  background: transparent;
+  border: 2px dashed var(--rule);
+  color: var(--ink);
+}
+.tile-next:hover { color: var(--ink); border-color: var(--ledger); }
+.tile-next .tile-figure { color: var(--ledger); }
 
 .tile-badge {
   align-self: flex-start;
@@ -422,6 +429,7 @@ main > section.band + section { padding-top: 5rem; }
 /* ---------- Inner pages ---------- */
 
 .page-head { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+header.page-head:not(.row) { max-width: 44rem; }
 .case-row {
   background: var(--paper-raised);
   border-radius: 18px;

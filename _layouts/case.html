@@ -27,7 +27,7 @@ layout: default
     <div class="margin"></div>
     <div class="main prose">
       {{ content }}
-      <p class="back"><a href="{{ '/work/' | relative_url }}">All work</a></p>
+      {% if page.collection == 'projects' %}<p class="back"><a href="{{ '/projects/' | relative_url }}">All projects</a></p>{% else %}<p class="back"><a href="{{ '/about/' | relative_url }}">Back to my experience</a></p>{% endif %}
     </div>
   </div>
 </div>
