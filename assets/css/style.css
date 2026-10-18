@@ -135,10 +135,25 @@ main > section + section { padding-top: 3.5rem; }
 }
 
 .site-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   font-weight: 700;
-  font-size: 1.0625rem;
+  font-size: 1.25rem;
   text-decoration: none;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+}
+.monogram {
+  display: inline-grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 8px;
+  background: var(--ledger);
+  color: var(--paper-raised);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .site-header nav {
@@ -187,6 +202,28 @@ h1 { font-size: clamp(2rem, 4vw, 2.6rem); }
   line-height: 1.06;
   letter-spacing: -0.03em;
   max-width: 17ch;
+  text-wrap: balance;
+}
+
+.name {
+  font-size: clamp(3.25rem, 9vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+.role {
+  margin: 0.9rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ledger);
+}
+.statement {
+  margin: 1.75rem 0 0;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
   text-wrap: balance;
 }
 
@@ -524,6 +561,8 @@ h2.margin {
   .margin { padding: 0 0 0.4rem; }
   .site-header { padding-bottom: 3rem; }
   .site-header nav { gap: 1rem; }
+  .site-header { flex-wrap: wrap; }
+  .site-name { font-size: 1.125rem; }
   main > section + section { padding-top: 2.75rem; }
   .ledger li { flex-wrap: wrap; gap: 0.15rem 0.75rem; }
   .ledger .item { flex: 1 1 100%; max-width: none; }
