@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="wrap">
+  <header class="row page-head">
+    <p class="margin">{{ page.period }}</p>
+    <div class="main">
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+      <dl class="facts">
+        {% if page.org %}<div><dt>Where</dt><dd>{{ page.org }}</dd></div>{% endif %}
+        {% if page.role %}<div><dt>My role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+        {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
+        {% if page.outcome %}<div><dt>Outcome</dt><dd>{{ page.outcome }}</dd></div>{% endif %}
+      </dl>
+    </div>
+  </header>
+  <div class="row">
+    <div class="margin"></div>
+    <div class="main prose">
+      {{ content }}
+      <p class="back"><a href="{{ '/work/' | relative_url }}">All work</a></p>
+    </div>
+  </div>
+</article>
