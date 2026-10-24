@@ -3,13 +3,13 @@
 # The cover is found automatically from the ISBN-13 (the 13-digit number starting with 978).
 # Optional: add "link: https://..." to a book to link its title to a page about it.
 
-- title: Empowered
-  subtitle: Ordinary People, Extraordinary Products
-  author: Marty Cagan with Chris Jones
-  isbn: "9781119691297"
-  topic: Product leadership
-  about: How the best product companies give teams problems to solve instead of features to build, and what leaders do to make that work.
-  note: It changed how I think about the role of a product owner. The question isn't "what should we ship?" but "what problem are we trusted to solve, and how will we know we solved it?"
+- title: Inspired
+  subtitle: How to Create Tech Products Customers Love
+  author: Marty Cagan
+  isbn: "9781119387503"
+  topic: Product management
+  about: How strong product teams discover products worth building, by testing ideas for value, usability, feasibility and business viability before committing engineers to them.
+  note: It taught me to separate discovery from delivery. Before building anything, I now ask which of those four risks is the biggest, and what the cheapest way to test it is.
 
 - title: AI Engineering
   subtitle: Building Applications with Foundation Models
