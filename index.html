@@ -56,6 +56,21 @@ layout: default
   <p class="more"><a href="{{ '/projects/' | relative_url }}">All projects</a></p>
 </section>
 
+<section class="wrap" aria-labelledby="books-heading">
+  <h2 class="section-title" id="books-heading">On my shelf</h2>
+  <p class="section-intro">Books that shape how I think about product work and AI.</p>
+  <div class="shelf">
+    {% for book in site.data.books limit:4 %}
+    <a class="shelf-book" href="{{ '/books/' | relative_url }}">
+      {% include book-cover.html book=book %}
+      <span class="shelf-title">{{ book.title }}</span>
+      <span class="shelf-author">{{ book.author }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="more"><a href="{{ '/books/' | relative_url }}">Why I recommend them</a></p>
+</section>
+
 <section class="wrap" aria-labelledby="writing-heading">
   <h2 class="section-title" id="writing-heading">From my notebook</h2>
   {% for post in site.posts limit:2 %}

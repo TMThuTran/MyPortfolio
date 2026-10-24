@@ -1,0 +1,32 @@
+---
+layout: default
+title: Books
+permalink: /books/
+description: Books that shape how Thu Tran thinks about product management and AI.
+---
+<section class="wrap">
+  <header class="page-head">
+    <h1>Books</h1>
+    <p class="lede">The books that shape how I think about product work and AI, and why I keep going back to them.</p>
+  </header>
+
+  <div class="books">
+    {% for book in site.data.books %}
+    <article class="book">
+      {% include book-cover.html book=book %}
+      <div class="book-text">
+        <p class="book-topic">{{ book.topic }}</p>
+        <h2 class="book-title">{% if book.link %}<a href="{{ book.link }}">{{ book.title }}</a>{% else %}{{ book.title }}{% endif %}</h2>
+        {% if book.subtitle %}<p class="book-subtitle">{{ book.subtitle }}</p>{% endif %}
+        <p class="book-author">{{ book.author }}</p>
+        <p class="book-about">{{ book.about }}</p>
+        {% if book.note %}
+        <blockquote class="book-note">
+          <p>{{ book.note }}</p>
+        </blockquote>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,7 @@
+<span class="cover">
+  <img src="https://covers.openlibrary.org/b/isbn/{{ include.book.isbn }}-L.jpg?default=false" alt="Cover of {{ include.book.title }} by {{ include.book.author }}" width="300" height="450" loading="lazy" onerror="this.parentNode.classList.add('cover-missing');this.remove()">
+  <span class="cover-fallback" aria-hidden="true">
+    <span class="cover-title">{{ include.book.title }}</span>
+    <span class="cover-author">{{ include.book.author }}</span>
+  </span>
+</span>

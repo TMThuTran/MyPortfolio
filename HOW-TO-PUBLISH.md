@@ -38,6 +38,7 @@ You can do all of this in the browser on github.com.
 - **Write a new post:** copy `templates/new-post.md`, create a new file in the `_posts` folder named like `2026-11-02-my-post-title.md`, paste, and write. The date in the file name is the publish date.
 - **Add a side project:** do the same with `templates/new-project.md`, in the `_projects` folder.
 - **Career case studies** (Adyen, Accenture) live in the `_work` folder and are linked from the About page.
+- **Add a book:** edit `_data/books.yml` and copy one of the existing blocks. The cover is found automatically from the ISBN.
 - **Change your bio or experience:** edit `about.md`.
 - **Change the home page headline or results:** edit `index.html`. The text sits between the tags, so change only the words.
 - **Change your name, email or LinkedIn:** edit `_config.yml`.

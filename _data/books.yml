@@ -1,0 +1,20 @@
+# Books on the Books page and the home page shelf.
+# To add a book: copy one block, change the details, and keep the same indentation.
+# The cover is found automatically from the ISBN-13 (the 13-digit number starting with 978).
+# Optional: add "link: https://..." to a book to link its title to a page about it.
+
+- title: Empowered
+  subtitle: Ordinary People, Extraordinary Products
+  author: Marty Cagan with Chris Jones
+  isbn: "9781119691297"
+  topic: Product leadership
+  about: How the best product companies give teams problems to solve instead of features to build, and what leaders do to make that work.
+  note: It changed how I think about the role of a product owner. The question isn't "what should we ship?" but "what problem are we trusted to solve, and how will we know we solved it?"
+
+- title: AI Engineering
+  subtitle: Building Applications with Foundation Models
+  author: Chip Huyen
+  isbn: "9781098166304"
+  topic: AI and machine learning
+  about: A practical guide to building products on top of large language models, from prompting and retrieval to agents, fine-tuning and, above all, evaluation.
+  note: The most useful book I've found for talking with engineers about AI on equal terms. The chapters on evaluation shaped how I approach my invoice-agent project.
